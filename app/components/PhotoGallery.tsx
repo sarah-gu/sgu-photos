@@ -132,7 +132,7 @@ export default function PhotoGallery({ initialPhotos }: PhotoGalleryProps) {
         {/* Gallery Grid - Using CSS Columns for Masonry effect */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
           {photos.map((photo) => {
-            console.log("Rendering photo:", photo.id, photo.url);
+            console.log("Rendering photo:", photo.title, photo.description);
             return (
               <div
                 key={photo.id}

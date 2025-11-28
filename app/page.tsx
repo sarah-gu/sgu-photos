@@ -2,6 +2,10 @@ import { prisma } from "./lib/prisma";
 import PhotoGallery from "./components/PhotoGallery";
 import { Photo } from "./types";
 
+// Force dynamic rendering to prevent caching
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 async function getPhotos(): Promise<Photo[]> {
   try {
     const photos = await prisma.photo.findMany({
